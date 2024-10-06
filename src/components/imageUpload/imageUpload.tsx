@@ -201,23 +201,28 @@ const ImageUpload: React.FC<ImageUploadPropsT> = (props) => {
         imageItem ? styles.filled : '',
 
         ].join(' ')} ref={dropAreaEl}>
-            {props.title?.toString().length > 0 &&
-                <h6 className={styles.header}>{props.title}</h6>
 
+            {(props.title?.toString().length > 0 && props.filesArr?.length === 0) &&
+                <h6 className={styles.header}>{props.title}</h6>
             }
             {inputEl}
-            <label className={[styles.fileAreaSpot, props.error ? styles.hasErr : ""].join(' ')} htmlFor={`${props.id}-f`} >
-                <div className={styles.fileAreaBox}>
-                    <div className={styles.fileArea}>
-
+            {
+                props.filesArr?.length === 0 &&
+                <label className={[styles.fileAreaSpot, props.error ? styles.hasErr : ""].join(' ')} htmlFor={`${props.id}-f`} >
+                    <div className={styles.fileAreaBox}>
+                        <div className={styles.fileArea}>
+                        </div>
                     </div>
+                </label>
+            }
+
+            {
+                props.filesArr?.length > 0 &&
+
+                <div className={[styles.imgPanel, props.error ? styles.hasErr : ''].join(' ')}>
+                    {imageItem}
                 </div>
-            </label>
-
-
-            <div className={[styles.imgPanel, props.error ? styles.hasErr : ''].join(' ')}>
-                {imageItem}
-            </div>
+            }
 
             {/* {
                 props.isValid &&
