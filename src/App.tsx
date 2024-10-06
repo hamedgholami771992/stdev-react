@@ -8,7 +8,7 @@ import { Route, Routes } from 'react-router-dom';
 
 
 
-import { PATHES, STORAGE_KEYS } from './utils/contants'
+import { PATHES, STORAGE_KEYS } from './utils/constants'
 import { makeSureOfExistanceOfEntireStateInStorageANDRedux } from './utils/others'
 
 import { useDispatch, useTypedSelector, UserReduxActionTypesT } from './redux/index'
@@ -40,12 +40,12 @@ function App(props) {
   // it gets the state from session|local storage and adds it into redux
   useEffect(() => {
     makeSureOfExistanceOfEntireStateInStorageANDRedux(userReduxState, UserReduxActionTypesT.saveWholeStateFromStorage, STORAGE_KEYS.user, dispatch)
- 
+
   }, [])
 
   // //we have to show to homePage if user has the token in his redux store
   let userHasTokenToSeeTheHomePage = false
-  if (userReduxState.accessToken ) {
+  if (userReduxState.accessToken) {
     userHasTokenToSeeTheHomePage = true
   }
 
@@ -58,14 +58,14 @@ function App(props) {
 
 
 
-     
+
       <Suspense fallback={<Fallback />}>
         <Routes>
           {
             //we only want to render the login page if user doesnt have the token
             !userHasTokenToSeeTheHomePage &&
             <>
-              <Route path={PATHES.login} element={<Login />} /> 
+              <Route path={PATHES.login} element={<Login />} />
               <Route path={PATHES.register} element={<Register />} />
             </>
           }

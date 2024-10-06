@@ -7,7 +7,7 @@ import { PostT } from '../../utils/models'
 import { postsData } from '../../utils/data'
 import CardA from '../../components/cards/cardA'
 import { useNavigate } from 'react-router-dom'
-import { LinksArray, PATHES, POST_PER_PAGE } from '../../utils/contants'
+import { LinksArray, PATHES, POST_PER_PAGE } from '../../utils/constants'
 import { ButtonAProps } from '../../components/buttons/buttonA'
 import NewPagination from '../../components/pagination/newPagination'
 
@@ -52,11 +52,11 @@ const Home: React.FC = () => {
     }
   }
 
-  const startingIndex = (currentPage-1)*POST_PER_PAGE
+  const startingIndex = (currentPage - 1) * POST_PER_PAGE
   let items = []
-  for(let i = startingIndex; i < startingIndex+POST_PER_PAGE; i++){
+  for (let i = startingIndex; i < startingIndex + POST_PER_PAGE; i++) {
     items.push(
-    <div className={styles.cardSpot} key={`jc-${i}`}>
+      <div className={styles.cardSpot} key={`jc-${i}`}>
         <CardA {...posts[i]} onEdit={() => onEditHandler(posts[i].id)} onRemove={() => onRemoveHandler(posts[i].id)} onShow={onShowPostHandler} />
       </div>
     )
@@ -88,7 +88,7 @@ const Home: React.FC = () => {
                 <div className={styles.paginationBox}>
                   <NewPagination
                     currentPage={currentPage}
-                    totalPages={Math.ceil(posts.length/POST_PER_PAGE)}
+                    totalPages={Math.ceil(posts.length / POST_PER_PAGE)}
                     onPageChange={handlePageChange}
                   />
                 </div>

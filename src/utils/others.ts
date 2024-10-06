@@ -1,6 +1,4 @@
 
-
-//---------------------------------------------------------------------------------------------
 //ex => makeSureOfExistanceOfEntireStateInStorageANDRedux(userReducer, REDUX_ACTIONS.addToMainCart, STORAGE_KEYS.user, dispatch)
 //a function that grab data from localStorage|sessionStorage and saves into redux
 export const makeSureOfExistanceOfEntireStateInStorageANDRedux = (reduxState, reduxActionType, storageKey, dispatch) => {

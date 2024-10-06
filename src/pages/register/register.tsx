@@ -10,7 +10,7 @@ import { EmailFC, PasswordFC, ConfirmPasswordFC, FirstNameFC, LastNameFC } from 
 import ImageUpload from '../../components/imageUpload/imageUpload';
 import { Images } from '../../assets/images';
 import { Langs, validator, ValidatorTypes } from '../../utils/validator';
-import { PASSWORD_MIN_LENGTH, PATHES } from '../../utils/contants';
+import { PASSWORD_MIN_LENGTH, PATHES } from '../../utils/constants';
 import { SendRegisterFormDataFields, sendRegisterRequest } from '../../utils/requests'
 const Register = () => {
   const [firstNameV, setFirstNameV] = useState("")
@@ -90,7 +90,7 @@ const Register = () => {
       setLoading(true)
       const res = await sendRegisterRequest(formData, { dispatch, navigate, refresh_token: '', toast })
       setLoading(false)
-      if(res.status !== 200){
+      if (res.status !== 200) {
         toast.error('Signing up has been failed')
       }
       else {
@@ -101,7 +101,7 @@ const Register = () => {
         setEmailV("")
         setPassV("")
         setConfirmedPassV("")
-        navigate({pathname: PATHES.login}, { replace: false })
+        navigate({ pathname: PATHES.login }, { replace: false })
       }
 
     }
@@ -121,8 +121,8 @@ const Register = () => {
       <section className={styles.register} onSubmit={() => { }} >
         <form className={styles.container}>
           <h2 className={styles.header}>
-            Register   / <span onClick={() => navigate({pathname: PATHES.login}, {replace: false})}>Login</span>
-          </h2> 
+            Register   / <span onClick={() => navigate({ pathname: PATHES.login }, { replace: false })}>Login</span>
+          </h2>
           <div className={styles.logoBox}>
             <img src={Images.Logo} alt="Logo" />
           </div>

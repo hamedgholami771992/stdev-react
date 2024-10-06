@@ -5,7 +5,7 @@ import MainPanel from '../../components/panels/mainPanel/mainPanel'
 import SpinnerB from '../../components/spinner/spinnerB'
 import { PostT } from '../../utils/models'
 import { useLocation, useNavigate, redirect, Navigate } from 'react-router-dom'
-import { PATHES } from '../../utils/contants'
+import { PATHES } from '../../utils/constants'
 import { historyPropertiesExistanceCheck } from '../../utils/utility'
 import { ButtonAProps } from '../../components/buttons/buttonA'
 import { sendShowUserPostRequest } from '../../utils/requests'
@@ -80,10 +80,10 @@ const ShowPost: React.FC = () => {
             <div className={styles.showPost}>
                 {
                     isNotLegal &&
-                    <Navigate to={PATHES.home} replace={true}/>
+                    <Navigate to={PATHES.home} replace={true} />
                 }
                 {
-                    !loading?
+                    !loading ?
                         <MainPanel title="Show Post" headButtons={headButtonsArr}>
                             <div className={styles.container}>
                                 <div className={styles.titleBox}>

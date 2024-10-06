@@ -16,6 +16,7 @@
 
     @at-root .link {
         align-self: center;
+        
 
         grid-area: link;
         @include typo($font-family: $font-family,
@@ -78,6 +79,7 @@
             $font-weight: 500,
             $text-align: left);
             margin-left: 20px;
+            cursor: pointer;
         }
     }
 }

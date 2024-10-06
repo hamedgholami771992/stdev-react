@@ -2,7 +2,7 @@ import axios, { AxiosRequestHeaders } from "axios";
 import CONFIG from '../config.json'
 import { UserReduxActionsT, UserReduxActionTypesT } from '../redux/index'
 
-import { PATHES } from './contants'
+import { PATHES } from './constants'
 
 
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from './imageUpload.module.scss'
-import { ULTIMATE_UPLOAD_SIZE } from "../../utils/contants";
+import { ULTIMATE_UPLOAD_SIZE } from "../../utils/constants";
 import { Images } from "../../assets/images";
 
 

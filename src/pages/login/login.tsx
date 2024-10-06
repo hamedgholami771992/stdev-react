@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react';
 import { UserReduxActionTypesT } from '../../redux/index'
 import { useDispatch as _useDispatch } from '../../redux/index'
 import { useNavigate } from 'react-router-dom'
-import { PATHES } from '../../utils/contants'
+import { PATHES } from '../../utils/constants'
 import { toast } from 'react-toastify'
 import { EmailFC, PasswordFC } from '../../utils/formControl'
 import FormControl from '../../components/formControl/formControl';
@@ -64,7 +64,7 @@ const Login: React.FC = () => {
         toast.success('you have been logged in successfully')
         setEmailV("");
         setPassV("")
-        navigate({pathname: PATHES.home}, { replace: true })
+        navigate({ pathname: PATHES.home }, { replace: true })
       }
       else {
         toast.error('something went wrong')
@@ -84,7 +84,7 @@ const Login: React.FC = () => {
     <div className={styles.login} >
       <form className={styles.container}>
         <h2 className={styles.header}>
-          Login  / <span onClick={() => navigate({pathname: PATHES.register}, {replace: false})}>Register</span>  
+          Login  / <span onClick={() => navigate({ pathname: PATHES.register }, { replace: false })}>Register</span>
         </h2>
         <div className={styles.logoBox}>
           <img src={Images.Logo} alt="Logo" />

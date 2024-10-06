@@ -1,5 +1,5 @@
 import { UserReduxT, UserReduxActionTypesT, UserReduxActionsT } from "./types"
-import { STORAGE_KEYS } from '../../utils/contants'
+import { STORAGE_KEYS } from '../../utils/constants'
 import { sendLogoutRequset } from "../../utils/requests"
 
 const initialState: UserReduxT = {
@@ -78,7 +78,7 @@ const userReducer = (state = initialState, action: UserReduxActionsT): UserRedux
       localStorage.removeItem(STORAGE_KEYS.user)
       //we also have to send a request to backend for loging the user out
       new Promise((resolve, reject) => {
-        if(state.accessToken && state.refreshToken){
+        if (state.accessToken && state.refreshToken) {
           sendLogoutRequset(state.accessToken, state.refreshToken)
         }
       }).catch(err => { })

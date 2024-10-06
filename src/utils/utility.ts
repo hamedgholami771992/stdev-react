@@ -64,18 +64,6 @@ export const phone_number_modifier_based_on_backend_instruction = (search_str: s
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 export const numberWithCommas = (x) => {
   x = x.toString();
   var pattern = /(-?\d+)(\d{3})/;
@@ -220,12 +208,7 @@ export const convertDataURLtoFile = (dataurl, filename) => {
   return new File([u8arr], filename, { type: mime });
 }
 
-//Calling both function **
-// const dataUrl = await convertUrlToDataURL(url)
-// console.log('Here is Base64 Url', dataUrl)
-// const fileData = convertDataURLtoFile(dataUrl, "imageName.jpg");
-// console.log("Here is JavaScript File Object",fileData)
-// fileArr.push(fileData)
+
 
 
 export const convertImageUrlToFileObj = async (url, id, prefixIdStr: string) => {

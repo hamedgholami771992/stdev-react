@@ -1,12 +1,8 @@
 import React, { ReactNode } from 'react'
 import styles from './sideBar.module.scss'
-import {useTypedSelector} from '../../redux/index'
-
-import { NavLink} from 'react-router-dom'
-import { useLocation,useNavigate} from 'react-router-dom'
-import { PATHES } from '../../utils/contants'
-import SectionLink from '../link/sectionLink'
-import { LinksArray } from '../../utils/contants'
+import { useNavigate} from 'react-router-dom'
+import { PATHES } from '../../utils/constants'
+import { LinksArray } from '../../utils/constants'
 import GroupLink from '../link/groupLink'
 
 

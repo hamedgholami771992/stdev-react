@@ -7,7 +7,7 @@ import { PostT } from '../../utils/models'
 import { postsData } from '../../utils/data'
 import CardA from '../../components/cards/cardA'
 import { Navigate, useLocation, useNavigate } from 'react-router-dom'
-import { LinksArray, PATHES } from '../../utils/contants'
+import { LinksArray, PATHES } from '../../utils/constants'
 import formControl from '../../components/formControl/formControl'
 import { convertDataURLtoFile, convertImageUrlToFileObj, convertUrlToDataURL, historyPropertiesExistanceCheck } from '../../utils/utility'
 import FormControl from '../../components/formControl/formControl'
@@ -174,7 +174,7 @@ const EditPost: React.FC = () => {
             <div className={styles.editPost}>
                 {
                     isNotLegal &&
-                    <Navigate to={PATHES.home} replace={true}/>
+                    <Navigate to={PATHES.home} replace={true} />
                 }
                 {
 
