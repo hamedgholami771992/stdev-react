@@ -1,0 +1,109 @@
+@import '../../sass\ configs/main.scss';
+
+
+
+.imageUpload {
+    width: 100%;
+    max-width: 20em;
+
+
+    &.highlighted {}
+
+    &.filled {}
+
+    @at-root .header {
+        @include typo($font-family: $font-family,
+            $font-size: 1.45em,
+            $line-height: 1.17em,
+            $color: #4444448b,
+            $text-align: left,
+            $font-weight: 500);
+            padding-bottom: 0.7em;
+            
+    }
+
+    @at-root input.fileInput {
+
+        display: none;
+    }
+
+    @at-root label.fileAreaSpot {
+        display: block;
+        width: 60%;
+
+        @at-root .fileAreaBox {
+            width: 100%;
+            padding-top: 100%;
+            position: relative;
+            @at-root .fileArea {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;  
+                background-image: url('../../assets/images/person.png');
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-radius: 50%;
+
+            }
+        }
+
+        &.hasErr {}
+    }
+
+    @at-root .imgPanel {
+        margin-top: 12%;
+        width: 100%;
+
+        &.hasErr {}
+
+
+
+        @at-root .imgSpot {
+            width: 100%;
+            padding-top: 100%;
+            position: relative;
+
+            @at-root .imgBox {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 10px;
+                overflow: hidden;
+
+                @at-root .img {
+                    width: 100;
+    
+                    @at-root .removeBtn {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        font-size: 2em;
+                        cursor: pointer;
+                    }
+                }
+            }
+            
+
+        }
+    }
+
+    @at-root .err {
+        margin-left: 1.66em;
+        margin-top: 0.416em;
+        @include typo($font-family: $font-family,
+            $font-size: 1.2em,
+            $line-height: 1.17em,
+            $color: #8A0000,
+            $text-align: left,
+            $font-weight: 500);
+    }
+
+}

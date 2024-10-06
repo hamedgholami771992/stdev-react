@@ -1,0 +1,36 @@
+@import '../../sass\ configs/main.scss';
+
+
+
+// template,headerBox,content,main,sideBarBox
+
+
+
+.template {
+  font-size: 10px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-width: min-content;
+
+  @at-root .headerBox {
+   
+
+  }
+
+  @at-root .content {
+    flex: 1;
+    display: grid;
+    grid-template-areas: 'sideBarBox main';
+    grid-template-columns: 20em 1fr;
+    align-items: stretch;
+
+    @at-root .main {
+      padding: 2em;
+      background-color: rgba(36, 31, 31, 0.823);
+    }
+
+    @at-root .sideBarBox {}
+  }
+}

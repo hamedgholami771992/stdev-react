@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"name": "backoffice",
+			"path": "..\\.."
+		}
+	],
+	"settings": {
+		"files.exclude": {
+			"config": true,
+			"node_modules": true,
+			".vscode": true,
+			"package-lock.json": true,
+			"package.json": true,
+			"README.md": true,
+			".gitignore": true,
+			"tsconfig.json": true,
+			"scripts": true,
+			"public": true
+		}
+	}
+}

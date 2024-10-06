@@ -1,0 +1,83 @@
+@import '../../sass\ configs/main.scss';
+
+
+
+
+.nav {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: white;
+    box-shadow: 0px 2px 2px 0px #9A9A9A40;
+
+    display: grid;
+    grid-template-areas: '. link . info .';
+    grid-template-columns: 0.43fr min-content 1fr max-content 0.43fr;
+
+    @at-root .link {
+        align-self: center;
+
+        grid-area: link;
+        @include typo($font-family: $font-family,
+            $font-size: 1.8em,
+            $line-height: 1.17em,
+            $letter-spacing: null,
+            $color: #444444,
+            $text-align: left);
+
+        &:hover {
+            color: #28A4DA;
+
+        }
+
+
+
+
+    }
+
+    @at-root .infoBox {
+        grid-area: info;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        @at-root .imgBox {
+            width: 7em;
+            height: 7em;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+
+            img {
+            
+            }
+        }
+
+        @at-root span.name {
+            @include typo($font-family: $font-family,
+            $font-size: 1.6em,
+            $line-height: 1.17em,
+            $letter-spacing: null,
+            $color: #444444,
+            $font-weight: 500,
+            $text-align: left);
+            margin-left: 15px;
+
+        
+
+        }
+
+        @at-root span.logout {
+            @include typo($font-family: $font-family,
+            $font-size: 1.6em,
+            $line-height: 1.17em,
+            $letter-spacing: null,
+            $color: #28a4da,
+            $font-weight: 500,
+            $text-align: left);
+            margin-left: 20px;
+        }
+    }
+}

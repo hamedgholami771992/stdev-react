@@ -1,0 +1,300 @@
+
+{
+    "res_for_get_talk_list": {
+        "list": [
+            {
+                "talk_id": 14,
+                "created_at": "2022-08-02T05:44:41Z",
+                "language_id": 1,
+                "first_account_id": 19,
+                "first_device_id": "r54gby",
+                "first_character_id": 1,
+                "second_account_id": 20,
+                "second_device_id": "fg4gnc",
+                "second_character_id": 2
+            },
+            {
+                "talk_id": 15,
+                "created_at": "2022-08-02T05:44:41Z",
+                "language_id": 2,
+                "first_account_id": 14,
+                "first_device_id": "r54gby",
+                "first_character_id": 1,
+                "second_account_id": 21,
+                "second_device_id": "fg4gnc",
+                "second_character_id": 2
+            },
+            {
+                "talk_id": 11,
+                "created_at": "2022-08-02T05:44:41Z",
+                "language_id": 3,
+                "first_account_id": 13,
+                "first_device_id": "r54gby",
+                "first_character_id": 1,
+                "second_account_id": 23,
+                "second_device_id": "fg4gnc",
+                "second_character_id": 2
+            },
+            {
+                "talk_id": 12,
+                "created_at": "2022-08-02T05:44:41Z",
+                "language_id": 4,
+                "first_account_id": 14,
+                "first_device_id": "r54gby",
+                "first_character_id": 1,
+                "second_account_id": 25,
+                "second_device_id": "fg4gnc",
+                "second_character_id": 2
+            },
+            {
+                "talk_id": 17,
+                "created_at": "2022-08-02T05:44:41Z",
+                "language_id": 5,
+                "first_account_id": 4,
+                "first_device_id": "rg6gby",
+                "first_character_id": 3,
+                "second_account_id": 28,
+                "second_device_id": "fgt3nc",
+                "second_character_id": 4
+            },
+            {
+                "talk_id": 17,
+                "created_at": "2022-08-02T05:44:41Z",
+                "language_id": 6,
+                "first_account_id": 4,
+                "first_device_id": "rg6gby",
+                "first_character_id": 3,
+                "second_account_id": 28,
+                "second_device_id": "fgt3nc",
+                "second_character_id": 4
+            },
+            {
+                "talk_id": 17,
+                "created_at": "2022-08-02T05:44:41Z",
+                "language_id": 7,
+                "first_account_id": 4,
+                "first_device_id": "rg6gby",
+                "first_character_id": 3,
+                "second_account_id": 28,
+                "second_device_id": "fgt3nc",
+                "second_character_id": 4
+            },
+            {
+                "talk_id": 17,
+                "created_at": "2022-08-02T05:44:41Z",
+                "language_id": 8,
+                "first_account_id": 4,
+                "first_device_id": "rg6gby",
+                "first_character_id": 3,
+                "second_account_id": 28,
+                "second_device_id": "fgt3nc",
+                "second_character_id": 4
+            },
+            {
+                "talk_id": 17,
+                "created_at": "2022-08-02T05:44:41Z",
+                "language_id": 9,
+                "first_account_id": 4,
+                "first_device_id": "rg6gby",
+                "first_character_id": 3,
+                "second_account_id": 28,
+                "second_device_id": "fgt3nc",
+                "second_character_id": 4
+            },
+            {
+                "talk_id": 17,
+                "created_at": "2022-08-02T05:44:41Z",
+                "language_id": 10,
+                "first_account_id": 4,
+                "first_device_id": "rg6gby",
+                "first_character_id": 3,
+                "second_account_id": 28,
+                "second_device_id": "fgt3nc",
+                "second_character_id": 4
+            },
+            {
+                "talk_id": 17,
+                "created_at": "2022-08-02T05:44:41Z",
+                "language_id": 11,
+                "first_account_id": 4,
+                "first_device_id": "rg6gby",
+                "first_character_id": 3,
+                "second_account_id": 28,
+                "second_device_id": "fgt3nc",
+                "second_character_id": 4
+            },
+            {
+                "talk_id": 17,
+                "created_at": "2022-08-02T05:44:41Z",
+                "language_id": 12,
+                "first_account_id": 4,
+                "first_device_id": "rg6gby",
+                "first_character_id": 3,
+                "second_account_id": 28,
+                "second_device_id": "fgt3nc",
+                "second_character_id": 4
+            }
+        ],
+        "meta": {
+            "total": 22,
+            "per_page": 20,
+            "current_page": 1,
+            "last_page": 1
+        }
+    },
+    "res_for_get_all_chars": {
+        "list": [
+            {
+                "id": 1,
+                "created_at": "2022-08-02T12:21:38Z",
+                "updated_at": "2022-08-02T12:21:38Z",
+                "name": "lionel",
+                "description": "messi",
+                "gender": 1,
+                "mood": 1,
+                "avatar": "happy-man.png",
+                "version": 1,
+                "is_deleted": false
+            },
+            {
+                "id": 2,
+                "created_at": "2022-08-02T12:21:38Z",
+                "updated_at": "2022-08-02T12:21:38Z",
+                "name": "cristiano",
+                "description": "ronaldo",
+                "gender": 1,
+                "mood": 2,
+                "avatar": "sad-man.png",
+                "version": 1,
+                "is_deleted": false
+            },
+            {
+                "id": 3,
+                "created_at": "2022-08-02T12:21:38Z",
+                "updated_at": "2022-08-02T12:21:38Z",
+                "name": "kate",
+                "description": "happy",
+                "gender": 2,
+                "mood": 1,
+                "avatar": "happy-woman.png",
+                "version": 1,
+                "is_deleted": false
+            },
+            {
+                "id": 4,
+                "created_at": "2022-08-02T12:21:38Z",
+                "updated_at": "2022-08-02T12:21:38Z",
+                "name": "sara",
+                "description": "sad",
+                "gender": 2,
+                "mood": 2,
+                "avatar": "sad-woman.png",
+                "version": 1,
+                "is_deleted": false
+            }
+        ],
+        "total": 4
+    },
+    "res_for_get_all_langs": {
+        "list": [
+            {
+                "id": 1,
+                "created_at": "2022-08-02T12:19:40Z",
+                "updated_at": "2022-08-02T12:37:55Z",
+                "name": "English",
+                "version": 1,
+                "is_deleted": false
+            },
+            {
+                "id": 2,
+                "created_at": "2022-08-02T12:21:38Z",
+                "updated_at": "2022-08-02T12:21:38Z",
+                "name": "Spanish",
+                "version": 1,
+                "is_deleted": false
+            },
+            {
+                "id": 3,
+                "created_at": "2022-08-02T12:21:38Z",
+                "updated_at": "2022-08-02T12:21:38Z",
+                "name": "Arabic",
+                "version": 1,
+                "is_deleted": false
+            },
+            {
+                "id": 4,
+                "created_at": "2022-08-02T12:21:38Z",
+                "updated_at": "2022-08-02T12:21:38Z",
+                "name": "Persian",
+                "version": 1,
+                "is_deleted": false
+            },
+            {
+                "id": 5,
+                "created_at": "2022-08-02T12:21:38Z",
+                "updated_at": "2022-08-02T12:21:38Z",
+                "name": "French",
+                "version": 1,
+                "is_deleted": false
+            },
+            {
+                "id": 6,
+                "created_at": "2022-08-02T12:21:38Z",
+                "updated_at": "2022-08-02T12:21:38Z",
+                "name": "Portuguese",
+                "version": 1,
+                "is_deleted": false
+            },
+            {
+                "id": 7,
+                "created_at": "2022-08-02T12:21:38Z",
+                "updated_at": "2022-08-02T12:21:38Z",
+                "name": "Deutsch",
+                "version": 1,
+                "is_deleted": false
+            },
+            {
+                "id": 8,
+                "created_at": "2022-08-02T12:21:38Z",
+                "updated_at": "2022-08-02T12:21:38Z",
+                "name": "Italian",
+                "version": 1,
+                "is_deleted": false
+            },
+            {
+                "id": 9,
+                "created_at": "2022-08-02T12:21:38Z",
+                "updated_at": "2022-08-02T12:21:38Z",
+                "name": "Chinese",
+                "version": 1,
+                "is_deleted": false
+            },
+            {
+                "id": 10,
+                "created_at": "2022-08-02T12:21:38Z",
+                "updated_at": "2022-08-02T12:21:38Z",
+                "name": "Indian",
+                "version": 1,
+                "is_deleted": false
+            },
+            {
+                "id": 11,
+                "created_at": "2022-08-02T12:21:38Z",
+                "updated_at": "2022-08-02T12:21:38Z",
+                "name": "Russian",
+                "version": 1,
+                "is_deleted": false
+            },
+            {
+                "id": 12,
+                "created_at": "2022-08-02T12:21:38Z",
+                "updated_at": "2022-08-02T12:21:38Z",
+                "name": "Turkish",
+                "version": 1,
+                "is_deleted": false
+            }
+        ],
+        "total": 12
+    } 
+}
+

@@ -1,0 +1,40 @@
+@import '../../sass\ configs/main.scss';
+
+
+
+
+.editPost {
+    
+    
+    @at-root .container {
+        width: 60em;
+        padding-top: 3em;
+        padding-bottom: 3em;
+        padding-left: 3em;
+        padding-right: 3em;
+        display: grid;
+        grid-template-areas: 'titleBox titleBox'
+        'descBox descBox'
+        'categoryBox categoryBox'
+        'imgUploadBox imgUploadBox';
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 3em;
+
+        @at-root .titleBox {
+            grid-area: titleBox;
+        }
+
+        @at-root .descBox {
+            grid-area: descBox;
+        }
+
+        @at-root .imgUploadBox {
+            grid-area: imgUploadBox;
+        }
+
+        @at-root .categoryBox {
+            grid-area: categoryBox;
+        }
+       
+    }
+}

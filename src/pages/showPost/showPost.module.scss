@@ -1,0 +1,101 @@
+@import '../../sass\ configs/main.scss';
+
+
+
+
+.showPost {
+
+
+    @at-root .container {
+        width: 60em;
+        padding-top: 3em;
+        padding-bottom: 3em;
+        padding-left: 3em;
+        padding-right: 3em;
+        display: grid;
+        grid-template-areas: 'titleBox titleBox'
+            'categoryBox categoryBox'
+            'descBox descBox'
+            'imgUploadBox imgUploadBox';
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 3em;
+
+        @at-root .titleBox {
+            grid-area: titleBox;
+            @include typo($font-family: $font-family,
+                $font-size: 1.3em,
+                $line-height: 1.21em,
+                $letter-spacing: null,
+                $color: #444444,
+                $text-align: left,
+                $font-weight: 500);
+        }
+
+        @at-root & > div {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+
+            .label {
+                display: inline-block;
+                font-weight: 600;
+                color: #333;
+                margin-bottom: 8px;
+                font-size: 1.2em;
+                line-height: 1;
+                border: 1px dotted gray;
+                background-color: rgba(190, 66, 66, 0.426);
+                padding-left: 0.3em;
+                padding-right: 0.3em;
+                padding-top: 0.1em;
+                padding-bottom: 0.1em;
+                border-radius: 4px;
+            }
+            .content {
+                padding-left: 1em;
+            }
+        }
+      
+
+        @at-root .descBox {
+            grid-area: descBox;
+
+            @include typo($font-family: $font-family,
+                $font-size: 1.3em,
+                $line-height: 1.21em,
+                $letter-spacing: null,
+                $color: #444444,
+                $text-align: left,
+                $font-weight: 500);
+        }
+
+        @at-root .imgUploadBox {
+            grid-area: imgUploadBox;
+            margin-left: 1em;
+            width: 30em;
+           border-radius: 10px;
+           overflow: hidden;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+
+           img {
+            width: 100%;
+           }
+        }
+
+        @at-root .categoryBox {
+            grid-area: categoryBox;
+
+            @include typo($font-family: $font-family,
+                $font-size: 1.3em,
+                $line-height: 1.21em,
+                $letter-spacing: null,
+                $color: #444444,
+                $text-align: left,
+                $font-weight: 500);
+        }
+
+    }
+}

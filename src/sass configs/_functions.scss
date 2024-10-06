@@ -1,0 +1,9 @@
+@function font-size-a($base-screen-width,$base-font-size,$small-screen-width,$small-font-size){
+
+    @return (($small-font-size * $base-screen-width) - ($base-font-size * $small-screen-width))/(($html---font-size * $default-browser-font-size) * ($base-screen-width - $small-screen-width));
+}
+
+@function font-size-b($base-screen-width,$base-font-size,$small-screen-width,$small-font-size){
+
+    @return (($base-font-size - $small-font-size)/($base-screen-width - $small-screen-width));
+}

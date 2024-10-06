@@ -1,0 +1,15 @@
+@import '../../sass\ configs/complete.scss';
+
+
+
+.toastify {
+    @include typo($font-family: IranYekanMobileBold,$font-size: 11px,$line-height: 29px,$color: white);
+    position: fixed;
+    background-color: cyan;
+    padding: 16px;
+    width: 300px;
+    border-radius: 16px;
+    z-index: 99999999;
+    right: 10px;
+    top: 10px;
+}

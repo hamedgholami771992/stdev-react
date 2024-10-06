@@ -1,0 +1,31 @@
+// tabActive,contentActive,tabContent,tabList,tabItem,tabsContentWrapper
+
+
+.tabs {
+    background-color: transparent;
+
+    @at-root .tabList {
+        background-color: transparent;
+        @at-root .tabItem {
+            cursor: pointer;
+           
+        }
+        @at-root .tabActive {
+            background-color: transparent;
+        }
+    }
+    
+    @at-root .tabsContentWrapper {
+        background-color: transparent;
+    
+        @at-root .tabContent{
+            background-color: transparent;
+        }
+        @at-root .contentActive {
+            background-color: transparent;
+        }
+    }
+
+}
+
+

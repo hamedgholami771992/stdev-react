@@ -1,0 +1,44 @@
+@import '../../sass\ configs/main.scss';
+
+
+// profileMenu, btnBox, menuBox, firstN, lastN
+
+.menu {
+    font-size: 10px;
+    background-color: $hamed-bg-first;
+    width: 100%;
+    padding: 1em 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.46);
+
+    @at-root .menuItem {
+        font-size: 1.4em;
+        font-family: roboto;
+        height: 2em;
+        padding-left: 2em;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        cursor: pointer;
+        color: white;
+        text-decoration: none;
+
+        & > * {
+            text-decoration: none;
+            color: white;
+        }
+
+        &:hover {
+            background-color: $hamed-bg-second;
+
+            & > * {
+                color: black;
+            }
+        }
+
+        @at-root .activeItem {
+            & > * {
+                color: cyan;
+            }
+        }
+    }
+}

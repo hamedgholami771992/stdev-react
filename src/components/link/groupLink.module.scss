@@ -1,0 +1,91 @@
+@import '../../sass\ configs/main.scss';
+
+
+.groupLink {
+    cursor: pointer;
+    // box-shadow: 0px 2px 1px 2px rgba(0,0,0,0.16);
+    background-color: transparent;
+
+    &.activeGroup {
+        background-color: rgba(0, 255, 0, 0.05);
+    }
+
+    @at-root .head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.5em;
+        padding-top: 0.3em;
+        padding-bottom: 0.5em;
+        padding-left: 1em;
+        padding-right: 1.5em;
+        color: #ecf0f1;
+
+
+
+        &:hover {
+            background: lighten($color: (
+                    #5caa9d),
+                $amount: 4
+                );
+            box-shadow: inset -3px 0px 0px lighten($color: (
+                    #1890FF),
+                $amount: 30
+                );
+        }
+
+        @at-root .icon {}
+
+        @at-root .title {}
+    }
+
+    @at-root .body {
+
+        // border-top: 1px solid gray;
+        @at-root .link {
+            font-size: 1.5em;
+            width: 100%;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.7em;
+
+
+            &:hover {
+                // background: lighten($color: (#E6F7FF), $amount: 4);
+                // box-shadow: inset -3px 0px 0px lighten($color: (#1890FF), $amount: 30);
+            }
+
+            &>a {
+                text-decoration: none;
+                display: block;
+                width: 100%;
+                color: #abd3dd;
+                padding-top: 0.2em;
+                padding-bottom: 0.2em;
+                // padding-bottom: 0.3em;
+                padding-left: 2em;
+                font-size: 0.8em;
+                line-height: 1.4em;
+                border-top: 1px dashed gray;
+
+                &:hover {
+                    background-color: #1ABC9C;
+                    color: #ffffff;
+                    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+                }
+            }
+
+
+            &.activeLink {
+                // box-shadow: inset -3px 0px 0px #1890FF;
+                // background: #E6F7FF;
+
+                &>a {
+                    background-color: #16A085;
+                    color: white;
+                }
+            }
+        }
+    }
+}

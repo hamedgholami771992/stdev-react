@@ -1,0 +1,81 @@
+@import '../../sass\ configs/main.scss';
+
+
+
+.login {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @at-root .container {
+    width: 60em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    padding-left: 3em;
+    padding-right: 3em;
+    background-color: #28a5da42;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    display: grid;
+    grid-template-areas: 'logoBox logoBox'
+      'headerr headerr'
+      'email email'
+      'password password'
+      'rememberMe rememberMe'
+      'btnBox .';
+    grid-column: repeat(2, 1fr);
+    row-gap: 3em;
+
+
+    @at-root .logoBox {
+      grid-area: logoBox;
+      max-width: 10em;
+  
+      img {
+
+      }
+    }
+
+    @at-root .header {
+      @include typo($font-family: $font-family,
+      $font-size: 1.8em,
+      $line-height: 1.21em,
+      $letter-spacing: null,
+      $color: #444444,
+      $text-align: left,
+      $font-weight: 700);
+
+      span {
+        color: #4444446b;
+        &:hover {
+          color: rgba(7, 172, 177, 0.617);
+          cursor: pointer;
+        }
+      }
+    }
+
+    @at-root .inputBox {
+    
+    }
+
+    @at-root .email {
+      grid-area: email;
+    }
+
+    @at-root .password {
+      grid-area: password;
+    }
+
+    @at-root .rememberMe {
+      grid-area: rememberMe;
+    }
+
+    @at-root .btnBox {
+      grid-area: btnBox;
+    }
+
+  }
+}

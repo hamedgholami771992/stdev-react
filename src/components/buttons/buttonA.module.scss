@@ -1,0 +1,59 @@
+@import '../../sass\ configs/main.scss';
+
+// type: 'regular' | 'add' | 'delete' | 'cancel'
+
+.buttonA {
+    @include typo($font-family: $font-family,
+        $font-size: 1.6em,
+        $line-height: 1.17em,
+        $letter-spacing: null,
+        $text-align: center,
+        $font-weight: 600);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 10px;
+    height: 2.4375em;
+  
+}
+
+.regular {
+    background: #28A4DA;
+    min-width: 11.75em;
+}
+
+.add {
+    content: "Add";
+    background: #28A4DA;
+    min-width: 9.625em;
+    
+    &::after {
+        content: "Add"
+    }
+    &::before {
+        content: "+";
+        font-size: 1.5em;
+        margin-right: 5px;
+    }
+}
+
+.delete {
+    background: #DA2828;
+    min-width: 11.625em;
+
+    &::after {
+        content: "Delete"
+    }
+}
+
+.cancel {
+    color: #444444;
+    background: #da28280b;
+    min-width: 11.875em;
+
+    &::after {
+        content: "Canel"
+    }
+    
+}

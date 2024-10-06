@@ -1,0 +1,73 @@
+@import '../../sass\ configs/main.scss';
+
+
+
+
+.profile {
+    font-size: 10px;
+
+    @at-root .container {
+        padding: 3em 0 4em;
+        margin: 0 auto;
+        display: grid;
+        grid-template-areas: 'firstName . userName'
+            'lastName . email'
+            'rolee . phoneNumber';
+        grid-template-columns: auto 10em auto;
+        justify-content: center;
+        column-gap: 2em;
+        row-gap: 2em;
+
+        @at-root .item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 22px;
+
+            @at-root .itemLabel {
+                color: rgba(0, 0, 0, 0.4);
+                margin-right: 2em;
+
+            }
+
+            @at-root .itemValue {
+                height: 32px;
+                border: 1px solid darken(#D9D9D9, 10);
+                border-radius: 2px;
+                width: 300px;
+                padding: 4px 12px;
+                color: rgba(0, 0, 0, 0.6);
+            }
+        }
+
+        @at-root .firstName {
+            grid-area: firstName;
+        }
+
+        @at-root .lastName {
+            grid-area: lastName;
+        }
+
+        @at-root .email {
+            grid-area: email;
+        }
+
+        @at-root .phoneNumber {
+            grid-area: phoneNumber;
+        }
+
+        @at-root .userName {
+            grid-area: userName;
+        }
+
+        @at-root .role {
+            grid-area: rolee;
+        }
+
+
+    }
+}

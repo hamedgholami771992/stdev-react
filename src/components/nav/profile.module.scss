@@ -1,0 +1,46 @@
+@import '../../sass\ configs/main.scss';
+
+// profileMenu, btnBox, menuBox, firstN, lastN
+
+
+.profileMenu {
+    font-size: 1opx;
+    color: white;
+    border: 1px solid white;
+    box-shadow: 0 2px 4px rgba(255,255,255,0.4);
+    padding: 0.5em 1em;
+    font-size: 1.5em;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+        color: black;
+        background-color: yellow;
+    }
+
+    @at-root .btnBox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        @at-root .firstN {
+            margin-right: 0.5em;
+        }
+
+        @at-root .lastN {
+
+        } 
+    }
+
+    @at-root .menuBox {
+        position: absolute;
+        top: 102%;
+        left: 0;
+        right: 0;
+ 
+        
+    }
+
+
+}

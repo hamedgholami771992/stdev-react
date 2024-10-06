@@ -1,0 +1,94 @@
+@import '../../sass\ configs/main.scss';
+
+$font-family: "Roboto";
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  button {
+    @include typo($font-family: $font-family,
+    $font-size: 1.8em,
+    $line-height: 1.21em,
+    $letter-spacing: null,
+    $color: #444444,
+    $text-align: center,
+    $font-weight: 700);
+
+    width: 1.72em;
+    height: 1.72em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+  
+    cursor: pointer;
+    border-radius: 5px;
+  
+
+    
+   
+
+    &:hover {
+      color: #28A4DA;
+     
+    }
+
+    &.active {
+      background-color: #e6f7ff;
+      border-color: #28A4DA;
+      color: #28A4DA;
+    
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+
+  .arrow {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    height: 4px;
+    width: 8px;
+
+    &.left {
+      // background-image: url('../../assets/images/leftArrow.png');
+      // background-repeat: no-repeat;
+      // background-size: cover;
+      // background-position: center center;
+      margin-right: 3.5px;
+    }
+    &.right {
+      // background-image: url('../../assets/images/leftArrow.png');
+      // background-repeat: no-repeat;
+      // background-size: contain;
+      // background-position: center center;
+      // transform: rotateZ(180deg);
+      margin-left: 3.5px;
+      img {
+        transform: rotateZ(180deg);
+      }
+    }
+  }
+
+  .dots {
+    @include typo($font-family: $font-family,
+    $font-size: 1.8em,
+    $line-height: 1.17em,
+    $letter-spacing: null,
+    $color: #28A4DA,
+    $text-align: center,
+    $font-weight: 700);
+ 
+    width: 1.72em;
+    height: 1.72em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+}

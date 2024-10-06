@@ -1,0 +1,21 @@
+@import '../../sass\ configs/main.scss';
+
+.nav {
+    font-size: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    padding-right: 5em;
+    padding-left: 5em;
+    background-color: $hamed-bg-first;
+
+    @at-root .logoBox {
+        width: 20em;  
+    }
+
+    @at-root .menuBox {
+        min-width: 13em;
+    }
+}

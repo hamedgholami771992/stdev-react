@@ -1,0 +1,35 @@
+@import '../../../sass\ configs/main.scss';
+
+
+
+
+.mainPanel {
+    font-size: 10px;
+    background: #f7f2f2;
+
+    @at-root .head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 24px;
+        min-height: 6em;
+        box-shadow: inset 0px -1px 0px #F0F0F0;
+
+
+        @at-root .heading {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.6em;
+            font-weight: 500;
+        }
+
+        @at-root .btnPanel {
+            display: flex;
+
+            &>*:not(:first-child) {
+                margin-left: 1em;
+            }
+        }
+    }
+
+    @at-root .body {}
+}

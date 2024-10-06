@@ -1,0 +1,79 @@
+@mixin abs($top: null,$right: null,$bottom: null,$left: null){
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom; 
+    left: $left;
+}
+@mixin fixed($top: null,$right: null,$bottom: null,$left: null){
+    position: fixed;
+    top: $top;
+    right: $right;
+    bottom: $bottom; 
+    left: $left;
+}
+
+@mixin abs-xy-total {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+@mixin abs-y-total {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+@mixin abs-x-total {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+@mixin rel-xy-total {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+@mixin z-index-for-relative($z-index) {
+    position: relative;
+    z-index: $z-index;
+}
+
+@mixin set-height-spot($aspect-ratio) {
+    width: 100%;
+    position: relative;
+    padding-top: $aspect-ratio;
+}
+
+@mixin respond-to($break-point) {
+    @media (max-width: $break-point) {
+        @content;
+    }
+}
+
+@mixin d-font($base-screen-width,$base-font-size,$small-screen-width,$small-font-size) {
+    font-size: calc((#{font-size-a($base-screen-width,$base-font-size,$small-screen-width,$small-font-size)} * 1rem)  +  (#{font-size-b($base-screen-width,$base-font-size,$small-screen-width,$small-font-size)} * 100vw));
+    
+}
+
+@mixin typo($font-family: null,$font-size: null,$line-height: null,$letter-spacing: null,$color: null, $text-align: null, $font-weight: null){
+    font-size: $font-size;
+    line-height: $line-height;
+    letter-spacing: $letter-spacing;
+    font-family: $font-family;
+    color: $color;
+    text-align: $text-align;
+    font-weight: $font-weight;
+}
+
+@mixin errorStyles($top,$left,) {
+    color:red;
+    position: absolute;
+    font-size: 12px;
+    top: $top;
+    left:$left;
+  }
+  

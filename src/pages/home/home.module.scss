@@ -1,0 +1,25 @@
+@import '../../sass\ configs/main.scss';
+
+
+
+
+.home {
+    
+    
+    @at-root .container {
+        padding-top: 3em;
+        padding-bottom: 3em;
+        padding-left: 3em;
+        padding-right: 3em;
+        @at-root .cardPanel {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 1em;
+            row-gap: 2em;
+
+            @at-root .cardSpot {
+                
+            }
+        }
+    }
+}

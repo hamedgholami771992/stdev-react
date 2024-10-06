@@ -1,0 +1,302 @@
+@import '../../sass\ configs/main.scss';
+
+$font-family: 'Roboto', sans-serif;
+
+.formControl {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    border: 1px solid #28A4DA;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    font-size: 10px;
+    min-height: 4.4em;
+
+
+    /* styles for showing fake placeholder when input is empty */
+    &::after {
+        @include typo($font-family: $font-family,
+            $font-size: 1.4em,
+            $line-height: 1.17em,
+            $letter-spacing: null,
+            $color: #8B8B8B,
+            $text-align: left,
+            $font-weight: 500);
+
+        position: absolute;
+        display: block;
+        content: attr(data-placeholder);
+
+        padding-top: 1em;
+        top: 0;
+        opacity: 1;
+        z-index: -1;
+        left: 1.5em;
+
+
+    }
+
+    &.isFocusedd {
+        &::after {
+            opacity: 0 !important;
+        }
+
+        &.hasNotValue::after {
+            opacity: 1;
+        }
+
+        &.isFilled::after {
+            opacity: 0;
+            // transition: opacity 1s ease-in-out 0.5s;
+        }
+
+        &:not(.isFilled) {
+            :global(.myOwnSelect-module__selected) {
+                display: none;
+            }
+        }
+    }
+
+    &.isFilled {
+        &:not(.isNotValid) {
+            border: 1px solid #28A4DA !important;
+        }
+
+        :global(.myOwnSelect-module__selected) {
+            color: #444444 !important;
+        }
+    }
+
+
+    /* styles for showing fake Error msg when input is invalid */
+    &.isNotValid {
+        border: 1px solid #DA2828;
+        background: #FFF0F0;
+
+        &::after {
+            color: #8A0000;
+        }
+
+        &::before {
+            @include typo($font-family: $font-family,
+                $font-size: 1.2em,
+                $line-height: 1.17em,
+                $letter-spacing: null,
+                $color: #8A0000,
+                $text-align: left,
+                $font-weight: 500);
+
+            position: absolute;
+            display: block;
+            content: attr(data-errormsg);
+            bottom: -5px;
+            transform: translateY(100%);
+            z-index: 1;
+            left: 1.66em;
+        }
+
+        .formInput {
+            color: #8A0000;
+        }
+
+        :global(.myOwnSelect-module__selected) {
+            color: #8A0000 !important;
+        }
+    }
+
+
+
+
+
+    @at-root .formInput {
+        @include typo($font-family: $font-family,
+            $font-size: 1.4em,
+            $line-height: 1.17em,
+            $letter-spacing: null,
+            $color: #444444,
+            $text-align: left,
+            $font-weight: 500);
+
+        border: none;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        outline: none;
+        white-space: pre;
+        z-index: 0;
+        background-color: transparent;
+        padding-left: 1.5em;
+        padding-right: 2.5em;
+
+    }
+
+
+
+
+
+
+    /* styles for hover */
+    // &:hover {
+    //     border-color: #FCCB29;
+
+    //     &.formLabel {
+    //         color: #6B451B;
+    //     }
+
+    //     @at-root .formControl.isFilled:hover .formBtn {
+    //         background: url('../../assets/images/closeHover.svg');
+    //     }
+
+    //     @at-root .formControl:not(.isFilled):hover .formBtn {
+    //         background: var(--icon-hover);
+    //     }
+    // }
+
+
+    /* styles for being focused and has been filled */
+    // &.isFocusedd {
+    //     border-color: #C9A220;
+    //     outline-color: #C9A220;
+    //     /* margin: -1px;    a hack for preventing shake of element between states with different border width */
+    //     /* border-width: 2px; */
+
+    //     &:not(.isFilled) .formBtn {
+    //         background: var(--icon-hover);
+    //     }
+
+
+    // }
+
+    // &.isFilled {
+
+
+
+    //     .formBtn {
+    //         background: url('../../assets/images/closeHover.svg');
+    //     }
+    // }
+
+    /* styles for Error */
+    // &.isNotValid {
+    //     border-color: #DC172A;
+    //     outline-color: #DC172A;
+    //     transition: all 1s ease-in-out;
+
+    //     .formInput {
+    //         color: #DC172A;
+    //         transition: all 1s ease-in-out;
+    //     }
+
+    //     .formLabel {
+    //         color: #DC172A;
+    //         transition: all 1s ease-in-out;
+    //     }
+
+    //     .formBtn,
+    //     &:hover .formBtn {
+    //         background: url('../../assets/images/closeError.svg');
+    //         transition: all 1s ease-in-out;
+    //     }
+    // }
+
+
+
+    &.textarea {
+        margin-top: 2em;
+
+        &::after {}
+
+        .formInput {
+            padding-top: 1em;
+            padding-bottom: 1.42em;
+            resize: none;
+        }
+
+        .formBtn {
+            display: none;
+        }
+    }
+
+
+
+    &.select {
+
+        :global(.myOwnSelect-module__select) {
+            :global(.myOwnSelect-module__row) {
+
+                :global(.myOwnSelect-module__selected) {
+                    @include typo($font-family: $font-family,
+                        $font-size: 1.4em,
+                        $line-height: 1.17em,
+                        $letter-spacing: null,
+                        $color: #8B8B8B,
+                        $text-align: left,
+                        $font-weight: 500);
+                    margin-left: 1.5em;
+                }
+
+                :global(.myOwnSelect-module__icon) {
+                    margin-right: 1.8em !important;
+                    width: 1.4em;
+                    height: 0.8em;
+                }
+            }
+
+            :global(.myOwnSelect-module__absoluteOptionsContainer) {
+                left: 1.17em;
+                right: 1.17em;
+                background-color: white;
+               
+              
+            
+               
+                top: calc(100% + 1px);
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+                &.myOwnSelect-module__optionContainerIsVisible {}
+
+                :global(.myOwnSelect-module__option) {
+                    @include typo($font-family: $font-family,
+                        $font-size: 1.4em,
+                        $line-height: 1.17em,
+                        $letter-spacing: null,
+                        $color: #444444,
+                        $text-align: left,
+                        $font-weight: 500);
+                    
+                    padding-right: 0.9em;
+                    padding-left: 0.9em;
+                    height:2em;
+
+                    &:hover {
+                        opacity: 80%;
+                        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+                        background-image: linear-gradient(to left, white 0%, #8b8b8b3d 100%);
+                        
+                        color: #444444;
+                        transition: background-image 0.4s ease, color 0.4s ease;
+                    }
+
+                    &:not(:first-child) {
+                      
+
+                    }
+
+                    &:not(:last-child) {}
+                }
+            }
+
+
+
+        }
+
+
+    }
+}
